@@ -253,6 +253,196 @@
             
               
                 
+                <a class="post-title-link" href="/2016/12/01/frameworkDay2/" itemprop="url">
+                  frameworkDay2
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-01T15:27:05+08:00" content="2016-12-01">
+              2016-12-01
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/01/frameworkDay2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/01/frameworkDay2/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="流行框架-git"><a href="#流行框架-git" class="headerlink" title="流行框架-git"></a>流行框架-git</h1><h2 id="复习"><a href="#复习" class="headerlink" title="复习"></a>复习</h2><p>1.1 SVN 总结以及使用建议</p>
+<ol>
+<li>每一次保存历史记录实际上就是一次提交<ul>
+<li>什么时候去保存历史记录?</li>
+</ul>
+<ul>
+<li>完成了一个具体的功能模块</li>
+<li>代码运行没有bug</li>
+</ul>
+<ul>
+<li>当天工作结束提交一次<ul>
+<li>没有bug的前提下去提交一次</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p>关于历史记录版本</p>
+<ul>
+<li>只要想要保存历史记录就必须通过服务器</li>
+<li>SVN 使用数字作为版本的唯一标识</li>
+<li>即便同时有多人提交，也是按照顺序的版本号增长</li>
+</ul>
+</li>
+<li><p>关于版本冲突</p>
+<ul>
+<li>例如服务器中的最新版本是 4, a.txt文件中有一段内容： hello</li>
+<li>张三 4 和服务器同步的版本</li>
+</ul>
+<ul>
+<li>修改了 a.txt ： hello world </li>
+<li>提交变动，保存历史记录，服务器直接就接受，版本升级为5</li>
+</ul>
+<ul>
+<li>李四4和服务器同步的版本</li>
+</ul>
+<ul>
+<li>修改了 a.txt： hello lisi </li>
+<li>提交变动，保存历史记录，服务器会告诉你先和服务器上的版本更新同步然后再提交</li>
+<li>更新<ul>
+<li>5：a.txt ： hello world </li>
+<li>4：a.txt ： hello list</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>解决冲突 <ul>
+<li>把另一个同事叫过来：</li>
+<li>冲突的地方：<ul>
+<li>使用别人的</li>
+<li>使用你自己的</li>
+<li>使用别人和你自己的</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>4 使用建议</p>
+<ul>
+<li>每次提交之前，先更新</li>
+<li>更新如果遇到冲突，先解决冲突，再提交</li>
+<li>由于解决冲突很耗时,多跟你的同事口头交流<ul>
+<li>例如你改这个文件的时候，告诉被人不要改</li>
+<li>或者别人改这个文件的时候，你不要改</li>
+<li>就是这样的方式可以最大程度的避免冲突</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-2-SVN-弊端"><a href="#1-2-SVN-弊端" class="headerlink" title="1.2 SVN 弊端"></a>1.2 SVN 弊端</h3><p>集中式版本控制就是集中的把源代码放到一个线上的仓库中，任何提交都围绕着中央服务器进行。<br>这种方式最大的好处就是模式简单，可以很快上手使用版本控制，但是也带来了一些问题：</p>
+<p>1.每一次提交都必须联网</p>
+<ul>
+<li>很耗时</li>
+<li>例如 Git 就可以本地保存历史记录，不需要联网<br>2.一旦服务器宕机或挂掉</li>
+<li>没法保存历史记录了（Git 可以）</li>
+<li>整个项目的历史记录可能丢失<ul>
+<li>Git 不会，每一个客户端本地都会有一个克隆仓库</li>
+</ul>
+</li>
+<li>无法协同</li>
+</ul>
+<hr>
+<h2 id="2-命令行"><a href="#2-命令行" class="headerlink" title="2.命令行"></a>2.命令行</h2><p>在电影中一个“超级黑客”坐在电脑前，从不摸一下鼠标，<br>就能够在 30 秒内侵入到超安全的军事计算机中。<br>这是因为电影制片人意识到，<br>作为人类，本能地知道让计算机圆满完成工作的唯一途径，是用键盘来操纵计算机。</p>
+<p>学习命令行最好的方式是学习 Linux 上的 shell、bash。</p>
+<h3 id="2-1-GUI-VS-CLI"><a href="#2-1-GUI-VS-CLI" class="headerlink" title="2.1 GUI VS CLI"></a>2.1 GUI VS CLI</h3><p>现在，大多数的计算机用户只是熟悉图形用户界面（GUI），并且产品供应商和此领域的学<br>者会灌输给用户这样的思想，命令行界面（CLI）是过去使用的一种很恐怖的东西。这就很不<br>幸，因为一个好的命令行界面，是用来和计算机进行交流沟通的非常有效的方式，正像人类社<br>会使用文字互通信息一样。人们说， <strong>图形用户界面让简单的任务更容易完成，而命令行界面<br>使完成复杂的任务成为可能</strong> ，到现在这句话仍然很正确。</p>
+<h3 id="2-2-shell"><a href="#2-2-shell" class="headerlink" title="2.2 shell"></a>2.2 shell</h3>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/12/01/frameworkDay2/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/11/30/hello-world/" itemprop="url">
                   Hello World
                 </a>
@@ -500,7 +690,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
