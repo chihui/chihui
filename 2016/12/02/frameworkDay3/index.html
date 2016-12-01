@@ -92,7 +92,7 @@
 <meta property="og:site_name" content="听说~">
 <meta property="og:description" content="Github 使用总结仓库假设本地有一个通过git init 创建出来的仓库需求：将这个本地仓库放到线上远程仓库。
 1.在第三方托管服务那里新建一个空仓库2.拿到空仓库的地址3.使用git remote add abc git@github.com:chihui/bbb.git4.使用git remote show看是否添加上（如果想放在其他第三方托管服务上，可以直接利用add添加的方式，可多个进">
-<meta property="og:updated_time" content="2016-12-01T18:10:26.000Z">
+<meta property="og:updated_time" content="2016-12-01T18:14:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="frameworkDay3">
 <meta name="twitter:description" content="Github 使用总结仓库假设本地有一个通过git init 创建出来的仓库需求：将这个本地仓库放到线上远程仓库。
@@ -303,8 +303,8 @@
       
         <h1 id="Github-使用总结"><a href="#Github-使用总结" class="headerlink" title="Github 使用总结"></a>Github 使用总结</h1><h2 id="仓库"><a href="#仓库" class="headerlink" title="仓库"></a>仓库</h2><h3 id="假设本地有一个通过git-init-创建出来的仓库"><a href="#假设本地有一个通过git-init-创建出来的仓库" class="headerlink" title="假设本地有一个通过git init 创建出来的仓库"></a>假设本地有一个通过<code>git init</code> 创建出来的仓库</h3><p>需求：将这个本地仓库放到线上远程仓库。</p>
 <p>1.在第三方托管服务那里新建一个空仓库<br>2.拿到空仓库的地址<br>3.使用<code>git remote add abc git@github.com:chihui/bbb.git</code><br>4.使用git remote show看是否添加上（如果想放在其他第三方托管服务上，可以直接利用add添加的方式，可多个进行托管）<br>5.使用<code>git push abc master</code>添加到线上<br>6.通过上面的操作之后，以后每次去<code>push</code>的时候都必须显示的写上<code>git push 远端仓库地址别名 分支名称</code></p>
-<p>如果不想每次<code>push</code>的时候都写那么长，（没有多个远程仓库，也不需要频繁地去push不同的分支，假设每次都是<code>push</code>到abc master,<br>那么可以通过<code>git push --set-upstream abc master</code>去推送一次，那么在以后的push中,只要仓库地址没变，分支不变，就可以直接<code>git push</code>）</p>
 <a id="more"></a>
+<p>如果不想每次<code>push</code>的时候都写那么长，（没有多个远程仓库，也不需要频繁地去push不同的分支，假设每次都是<code>push</code>到abc master,<br>那么可以通过<code>git push --set-upstream abc master</code>去推送一次，那么在以后的push中,只要仓库地址没变，分支不变，就可以直接<code>git push</code>）</p>
 <h3 id="本地没有，线上有"><a href="#本地没有，线上有" class="headerlink" title="本地没有，线上有"></a>本地没有，线上有</h3><p>需求：想要获取远程仓库到本地</p>
 <p>1.使用 <code>git clone 远程仓库地址</code> </p>
 <p>只要执行了上面的操作之后，git会自动帮你通过网络去下载对应的远程仓库，下载下来之后，自动添加一个remote<br>,地址是你 clone的那个地址，名字叫 origin，之后，只要你想要push，直接git push origin master就可以了，<br>原因是它已经自动帮你建立了上下游关系。</p>
