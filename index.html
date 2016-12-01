@@ -253,6 +253,111 @@
             
               
                 
+                <a class="post-title-link" href="/2016/12/02/frameworkDay3/" itemprop="url">
+                  frameworkDay3
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-02T02:09:00+08:00" content="2016-12-02">
+              2016-12-02
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/02/frameworkDay3/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/02/frameworkDay3/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="Github-使用总结"><a href="#Github-使用总结" class="headerlink" title="Github 使用总结"></a>Github 使用总结</h1><h2 id="仓库"><a href="#仓库" class="headerlink" title="仓库"></a>仓库</h2><h3 id="假设本地有一个通过git-init-创建出来的仓库"><a href="#假设本地有一个通过git-init-创建出来的仓库" class="headerlink" title="假设本地有一个通过git init 创建出来的仓库"></a>假设本地有一个通过<code>git init</code> 创建出来的仓库</h3><p>需求：将这个本地仓库放到线上远程仓库。</p>
+<p>1.在第三方托管服务那里新建一个空仓库<br>2.拿到空仓库的地址<br>3.使用<code>git remote add abc git@github.com:chihui/bbb.git</code><br>4.使用git remote show看是否添加上（如果想放在其他第三方托管服务上，可以直接利用add添加的方式，可多个进行托管）<br>5.使用<code>git push abc master</code>添加到线上<br>6.通过上面的操作之后，以后每次去<code>push</code>的时候都必须显示的写上<code>git push 远端仓库地址别名 分支名称</code></p>
+<p>如果不想每次<code>push</code>的时候都写那么长，（没有多个远程仓库，也不需要频繁地去push不同的分支，假设每次都是<code>push</code>到abc master,<br>那么可以通过<code>git push --set-upstream abc master</code>去推送一次，那么在以后的push中,只要仓库地址没变，分支不变，就可以直接<code>git push</code>）</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/12/02/frameworkDay3/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/12/01/frameworkDay2/" itemprop="url">
                   frameworkDay2
                 </a>
@@ -619,7 +724,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
